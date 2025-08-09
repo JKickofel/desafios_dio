@@ -1,7 +1,6 @@
 @import url("global.css");
 
 body {
-    margin: 0;
     display: grid;
     grid-template-rows: 100% 4fr 1fr;/*6 linhas*/
     grid-template-columns: 1fr 6fr 1fr;/*3 colunas*/
@@ -9,7 +8,7 @@ body {
         "header header header"
         "main main main"
         "footer footer footer";
-    height: 100vh;/*ocupa altura total da tela*/
+    height: 80vh;
 }
 
 header {
@@ -17,65 +16,225 @@ header {
     background-image: url("../header_background.png");
     background-size: cover;
     background-repeat: no-repeat;
-    
-    display: flex;/*Ativando o flexbox no header*/
+    background-position: center;
+    height: auto;
+    min-height: 300px;
+    /*Ativando o flexbox no header*/
+    display: flex;
     flex-direction: column;/*coloca título, parágrafo e botões em coluna*/
     align-items: center;/*centraliza horizontalmente*/
     justify-content: center;/*centraliza verticalmente*/
     text-align: center;/*centraliza texto*/
     gap: 16px;/*espaço entre os elementos*/
+    padding: 20px;
 }
 
 header h1 {
-    font-family: Luckiest Guy;
+    font-family: 'Luckiest Guy', cursive;
     color: white;
     font-weight: 400;
     font-size: 56px;
-    width: 313px;
-    height: 112px;
+    text-transform: uppercase;
+    max-width: 313px;
+    width: 90%;
+    height: auto;
+    line-height: 100%;
+    letter-spacing: 0%;
+    margin: 0;
 }
 
 header p {
-    width: 757px;
-    height: 66px;
+    max-width: 757px;
+    width: 90%;
+    height: auto;
     color: white;
-    font-family: Open Sans;
+    font-family: 'Open Sans', sans-serif;
 }
 
-header .botao {
+.botao {
     display: flex;
-    flex-wrap: wrap;/*evita quebra em telas pequenas*/
-    gap: 16px;
-    width: 502px;
-    height: 44px;
-    font-family: Open Sans;
+    gap: 16px; /* espaço entre os dois botões */
+    flex-wrap: wrap; /* evita quebra feia em telas pequenas */
+}
+
+.botao a {
+    display: inline-flex; /*deixa os botões lado a lado*/
+    justify-content: center; /* centraliza o texto horizontalmente dentro do botão */
+    align-items: center; /* centraliza o texto verticalmente dentro do botão */
+    padding: 12px 20px;
+    border-radius: 28px;
+    font-family: 'Open Sans', sans-serif;
     font-size: 1rem;
+    font-weight: 400;
+    text-decoration: none;/*tira o sublinhado do link*/
+    transition: background-color 0.2s ease-in-out; /* adiciona efeito suave ao mudar a cor do fundo no hover */
 }
 
 #botao-windows {
-    background: white url("../rectangle_white.png") no-repeat 10px center;
-    border-radius: 28px;
-    width: 205px;
-    height: 44px;
+    background-color: white;
     color: #23272A;
 }
 
 #botao-navegador {
-    background: #23272A url("../rectangle_black.png") no-repeat 10px center;
-    border-radius: 28px;
-    width: 281px;
-    height: 44px;
+    background-color: #23272A;
     color: white;
+}
+
+/*hover é a troca de cor quando passa o mouse*/
+#botao-windows:hover {
+    background-color: #e5e5e5;
+}
+
+#botao-navegador:hover {
+    background-color: #36393f;
 }
 
 main {
     grid-area: main;
     display: grid;
     grid-template-rows: repeat(4, 1fr);
-    grid-template-columns: 1fr 6fr 1fr;
+    grid-template-columns: 1fr;
+    font-family: 'Open Sans', sans-serif;
+    color: #23272A;
+}
+
+.section-1,
+.section-3 {
+    background-color: #ffffff; /* cor de fundo */
+    display: flex;
+    justify-content: center; /* horizontal */
+    align-items: center;     /* vertical */
+    padding: 50px 13%;
+    min-height: 400px;
+}
+
+.section-2 {
+    background-color: #f6f6f6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 13%;
+    min-height: 400px;
+}
+
+.section-content {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* quebra em telas pequenas */
+    align-items: center; /* centraliza verticalmente */
+    gap: 16px; /* espaçamento entre imagem e texto */
+    padding: 15px 0;
+}
+
+.section-content figure {
+    flex: 1 1 400px; /* cresce e diminui, mínimo de 400px */
+    max-width: 607px;
+    width: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.section-content img {
+    max-width: 607px;
+    width: 100%;
+    height: auto;
+}
+
+.section-text {
+    flex: 1 1 400px;
+    max-width: 270px;
+    width: 90%;
+    height: auto;
+    text-align: left;
+    padding: 0 10px;
+}
+
+.section-text h2 {
+    font-size: 2rem;
+    color: #23272A;
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-family: Open Sans;
+    font-weight: 800; 
+}
+
+.section-text p {
+    font-size: 1rem;
+    color: #23272A;
+    font-family: Open Sans;
+    font-weight: 400;
+}
+
+.section-4 {
+    display: flex;
+    background-color: #f6f6f6;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 13%;
+    min-height: 400px;
+}
+
+.section-4 .section-content-4 {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 16px;
+}
+
+.section-4 .section-text-4 {
+    max-width: 608px;
+    width: 90%;
+    text-align: center;
+    padding: 0;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     gap: 10px;
+}
+
+.section-4 .section-text-4 h2,
+.section-4 .section-text-4 p {
+    margin: 0;
+}
+
+
+.section-4 .section-text-4 h2 {
+    font-size: 2rem;
+    color: #23272A;
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-family: 'Luckiest Guy', cursive;
+    font-weight: 400; 
+}
+
+.section-4 figure {
+    max-width: 607px;
+    width: 100%;
+    margin: 0;
+}
+
+.section-4 img {
+    max-width: 500px;
+    width: 100%;
+    height: auto;
 }
 
 footer {
     grid-area: footer;
+    background-color: #23272A;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 0;
+}
+
+footer img {
+    max-width: 230px;
+    width: 90%;
+    height: auto;
 }
