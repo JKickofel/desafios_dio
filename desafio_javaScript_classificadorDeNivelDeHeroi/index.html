@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/style.css">
+    <title>Herói Nível</title>
+</head>
+<body>
+    <h1>Você completou o questionário! Obrigada!</h1>
+
+<script>
+    // repete até ter um nome válido
+    let nome = "";
+    while (!nome) {
+        nome = prompt("Vamos descobrir o quão forte o seu Herói é? Mas primeiro, qual o nome do seu Herói: ");
+        if (!nome) {
+        alert("⚠️ O Herói precisa ter um nome para ser reconhecido nas futuras canções que farão sobre sua bravura! Por favor, digite um nome!");
+        }
+    }
+
+    let xp;
+    while (true) {
+        xp = prompt("Agora, quanto XP o Herói " + nome + " tem? Digite um valor entre 0 e 11.000: ");
+
+        if (xp) {
+        // remove pontos e vírgulas
+        xp = xp.replace(/[.,]/g, "");
+
+        // tenta converter para número
+        xp = parseInt(xp);
+
+        // se for número válido, sai do loop
+        if (!isNaN(xp)) {
+            break;
+        } else {
+            alert("⚠️ Opa! Você precisa digitar um NÚ-ME-RO!. Tente novamente.");
+        }
+    } else {
+        alert("⚠️ Não tenha vergonha se o seu Herói ainda é fraquinho! Digite o XP do " + nome + "!");
+    }
+  }
+
+    let nivel;
+
+    if (xp < 1000) nivel = "ferro";
+    else if (xp <= 2000) nivel = "bronze";
+    else if (xp <= 5000) nivel = "prata";
+    else if (xp <= 7000) nivel = "ouro";
+    else if (xp <= 8000) nivel = "platina";
+    else if (xp <= 9000) nivel = "ascendente";
+    else if (xp <= 10000) nivel = "imortal";
+    else if (xp > 10000 && xp < 11001) nivel = "radiante";
+    else nivel = "Isekai"; // caso especial{
+
+    if (nivel) {
+        alert(`O Herói de nome ${nome} está no nível ${nivel}!`);
+    } else {
+        alert(`⚠️ "Você tem certeza desse número?" (${xp}) Ahhh, deve ser um valor de XP de algum isekai, pois aqui não existe!`);
+    }
+</script>
+
+</body>
+</html>

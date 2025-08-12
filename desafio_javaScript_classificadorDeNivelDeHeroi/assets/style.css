@@ -1,0 +1,16 @@
+* {
+    margin: 0;
+}
+
+body {
+    background-image: url("../assets/gamer-6022003.svg");
+    background-size: cover;
+    max-width: 1080px;
+    width: 90%;
+    height: auto;
+    background-repeat: no-repeat;
+}
+
+h1 {
+    color: mediumseagreen;
+}
