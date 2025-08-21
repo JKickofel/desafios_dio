@@ -1,0 +1,35 @@
+* {
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background: -webkit-linear-gradient(#b4ffb8, #047e00);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.content {
+    width: 100vw;
+    height: 100vh;
+    padding: 1rem;
+    /*apliocação de glassmorphism*/
+    background: rgba(156, 89, 89, 0.2);
+    /* branco com 20% de opacidade */
+    backdrop-filter: blur(20px);
+    /* efeito fosco */
+    -webkit-backdrop-filter: blur(20px);
+    /* suporte para Safari */
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    /* borda leve para contraste */
+}
+
+@media screen and (min-width: 992px) {
+    .content {
+        max-width: 992px;
+        height: auto;
+        margin: 1rem auto;
+        border-radius: 1rem;
+    }
+}
