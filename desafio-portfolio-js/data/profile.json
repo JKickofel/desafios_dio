@@ -1,0 +1,74 @@
+{
+    "name": "Jordana Grützmann Kicköfel",
+    "photo": "https://avatars.githubusercontent.com/JKickofel",
+    "job": "Desenvolvedora Front-end",
+    "location": "Pelotas/RS",
+    "phone": "(53) 98462-1020",
+    "email": "jordana.grutzmann@gmail.com",
+    "skills": {
+        "hardSkills": [
+            {
+                "name": "HTML",
+                "logo": "https://raw.githubusercontent.com/JKickofel/JKickofel.github.io/refs/heads/main/portfolio-js/data/images/html.png"
+            },
+            {
+                "name": "CSS",
+                "logo": "https://raw.githubusercontent.com/JKickofel/JKickofel.github.io/refs/heads/main/portfolio-js/data/images/css.png"
+            },
+            {
+                "name": "JavaScript",
+                "logo": "https://raw.githubusercontent.com/JKickofel/JKickofel.github.io/refs/heads/main/portfolio-js/data/images/js.png"
+            },
+            {
+                "name": "Nodejs",
+                "logo": "https://raw.githubusercontent.com/JKickofel/JKickofel.github.io/refs/heads/main/portfolio-js/data/images/nodejs.png"
+            },
+            {
+                "name": "VSCode",
+                "logo": "https://raw.githubusercontent.com/JKickofel/JKickofel.github.io/refs/heads/main/portfolio-js/data/images/vscode.png"
+            }
+        ],
+        "softSkills": [
+            "Liderança",
+            "Respeito",
+            "Organização",
+            "Persistência",
+            "Eficácia"
+        ]
+    },
+    "languages": [
+        "Português BR",
+        "Inglês (intermediário)",
+        "Francês (iniciante)",
+        "Libras (básico)"
+    ],
+    "portfolio": [
+        {
+            "name": "Projeto Recriando uma Pokedex",
+            "url": "https://github.com/JKickofel/desafios_dio/tree/main/projeto_pokedex",
+            "github": true
+        },
+        {
+            "name": "Portfólio Front-end",
+            "url": "https://github.com/JKickofel/JKickofel.github.io/tree/main/portfolio_frontEndDoZero_html_css_javaScript",
+            "github": true
+        },
+        {
+            "name": "Projeto Game temático Yu-Gi-Oh!",
+            "url": "https://github.com/JKickofel/desafios_dio/tree/main/projeto-yu-gi-oh-js-css-html",
+            "github": true
+        },
+        {
+            "name": "Desafio Site do Discord",
+            "url": "https://github.com/JKickofel/desafios_dio/tree/main/trilha_css_desafio_03_layoutResponsivo_Discord",
+            "github": true
+        }
+    ],
+    "professionalExperience": [
+        {
+            "name": "Tecnologia",
+            "period": "-",
+            "description": "-"
+        }
+    ]
+}
